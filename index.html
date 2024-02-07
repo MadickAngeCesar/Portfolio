@@ -121,20 +121,23 @@
     /* Project Styles */
     .project {
       display: flex;
-      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start;
       margin-bottom: 40px;
     }
 
     .project-info {
+      flex: 1;
       padding-right: 20px;
     }
 
     .project-title {
+      display: flex;
+      align-items: center;
       margin-bottom: 10px;
     }
 
     .project-title img {
-      max-width: 100px; /* Adjust size for smaller screens */
+      max-width: 50px;
       margin-right: 10px;
       border-radius: 4px;
     }
@@ -144,19 +147,26 @@
       margin: 0;
     }
 
-    .project-description,
-    .project-skills {
+    .project-description {
+      color: #B0B0B0; /* Light gray text color */
       margin-bottom: 10px;
     }
 
     .project-screenshot {
-      max-width: 100%; /* Adjust size for smaller screens */
+      max-width: 300px;
       border-radius: 8px;
-      margin-top: 10px; /* Add margin for separation */
     }
 
-    .project-link,
+    .project-link {
+      margin-top: 10px;
+    }
+
     .project-delete {
+      margin-top: 10px;
+    }
+
+    .project-skills {
+      color: #fff;
       margin-top: 10px;
     }
 
@@ -188,26 +198,7 @@
       color: #fff;
     }
 
-    /* Media Queries for Mobile View */
-    @media screen and (max-width: 600px) {
-      h1 img {
-        width: 100px; /* Adjust size for smaller screens */
-        height: 100px;
-      }
-
-      .tab-link {
-        padding: 8px 16px; /* Adjust padding for smaller screens */
-        margin: 0 8px;
-      }
-
-      .project-title img {
-        max-width: 50px; /* Adjust size for smaller screens */
-      }
-
-      .project-screenshot {
-        max-width: 100%; /* Adjust size for smaller screens */
-      }
-    }
+  
   </style>
 </head>
 
@@ -292,7 +283,7 @@
             <div class="project">
               <div class="project-info">
                 <div class="project-title">
-                  <img src="${project.logo}" alt="${project.title} Logo">
+                  <img src="${project.logo}" alt="${project.title} Logo" style="max-width: 30px; border-radius: 4px;">
                   <h3>${project.title}</h3>
                 </div>
                 <a href="${project.github}" class="project-link" target="_blank">GitHub Repository</a>
@@ -349,13 +340,14 @@
         <div class="project">
           <div class="project-info">
             <div class="project-title">
-              <img src="${logo}" alt="${title} Logo">
+              <img src="${logo}" alt="${title} Logo" style="max-width: 30px; border-radius: 4px;">
               <h3>${title}</h3>
             </div>
             <a href="${github}" class="project-link" target="_blank">GitHub Repository</a>
             <p class="project-skills"><strong>Description:</strong> ${description}</p>
             <p class="description"><strong>Skills Used:</strong> ${skills}</p>
             <button class="project-delete" onclick="deleteProject(this)">Delete</button>
+            <hr>
           </div>
           <img src="${screenshot}" alt="${title} Screenshot" class="project-screenshot">
         </div>
