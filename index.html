@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madick Ange Cesar - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1><img id="picture" src="0.jpg" alt="Your Picture"></h1>
+    <h1>Madick Ange César</h1>
+    <p>Computer Scientist and Developer</p>
+    <div class="tabs">
+      <a href="#" class="tab-link active" onclick="openSection(event, 'about')">About Me</a>
+      <a href="#" class="tab-link" onclick="openSection(event, 'skills')">Skills</a>
+      <a href="#" class="tab-link" onclick="openSection(event, 'projects')">Projects</a>
+      <a href="#" class="tab-link" onclick="openSection(event, 'contact')">Contact</a>
+    </div>
+  </header>
+
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p>Hi, I'm Madick Ange Cesar, a computer scientist and developer 
+      passionate about creating innovative solutions.</p>
+  </section>
+  
+  <section id="skills">
+    
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <hr>
+      <div class="project">
+      <div class="project-info">
+        <div class="project-title">
+          <img src="Projects/i2.ico" id="lo" alt="icon">
+          <h3>Madick Translator</h3>
+        </div>
+        <a href="github.com/MadickAngeCesar" class="project-link" target="_blank">GitHub Repository</a>
+        <p class="project-skills"><strong>Description:</strong> 
+        This app funtion is to translate text from one language to another, under the use of internet </p>
+        <p class="description"><strong>Skills Used:</strong> Python, Tkinter</p>
+      </div>
+      <span><img src="Projects/s2.png" class="project-screenshot" alt="project-screenshot"></span>
+    </div>
+
+    <hr>
+    <div class="project">
+      <div class="project-info">
+        <div class="project-title">
+          <img src="Projects/i1.ico" id="lo" alt="icon">
+          <h3>AMS</h3>
+        </div>
+        <a href="github.com/MadickAngeCesar" class="project-link" target="_blank">GitHub Repository</a>
+        <p class="project-skills"><strong>Description:</strong> 
+        This an airport management system, which permits flights and customer view, flight adding and booking etc </p>
+        <p class="description"><strong>Skills Used:</strong> Python, PyQt5, MySQL</p>
+      </div>
+      <span><img src="Projects/s1.png" class="project-screenshot" alt="project-screenshot"></span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me at</p> 
+    <p>  Email: <a href="mailto:madickangecesar59@gmail.com">
+        madickangecesar59@gmail.com</a></p>
+    <p>  Whatsapp: <u>695391883</u></p>
+    <p><a href="https://www.linkedin.com/in/ange-cesar-madick-88b665281" target="_blank">
+      LinkedIn</a></p>
+    <p><a href="https://github.com/MadickAngeCesar" target="_blank">
+      GitHub</a></p>
+  </section>
+
+  <script>
+    // Open section
+    function openSection(event, sectionId) {
+      event.preventDefault();
+
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.classList.add('active');
+
+      const tabs = document.querySelectorAll('.tab-link');
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+ /* General Styles */
+ body {
+    background-color: #121212; /* Dark background color */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  /* Header Styles */
+  header {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #1E1E1E; /* Darker header background color */
+  }
+
+  a {
+    color: #fff;
+  }
+
+  h1 {
+    color: #FFD700; /* Dark goldenrod */
+    margin-bottom: 5px;
+    
+  }
+
+  h2 {
+    color: #BB86FC; /* Lavender purple */
+  }
+
+  h3 {
+    color: #BB86FC; /* Lavender purple */
+  }
+
+  h1 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+  }
+
+  p {
+    color: #B0B0B0; /* Light gray text color */
+    margin-top: 0;
+  }
+
+  .tabs {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .tab-link {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .tab-link.active {
+    background-color: #1E1E1E;
+  }
+
+  /* Section Styles */
+  section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none; /* Hide all sections by default */
+  }
+
+  section.active {
+    display: block; /* Show the active section */
+  }
+
+  label {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* Project Styles */
+  .project {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .project-info {
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  .project-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .project-title img {
+    max-width: 50px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+
+  .project-title h3 {
+    color: #BB86FC; /* Lavender purple */
+    margin: 0;
+  }
+
+  .project-description {
+    color: #B0B0B0; /* Light gray text color */
+    margin-bottom: 10px;
+  }
+
+  .project-screenshot {
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 8px;
+  }
+
+  .project-link {
+    margin-top: 10px;
+  }
+
+  .project-skills {
+    color: #fff;
+    margin-top: 10px;
+  }
+
+  /* Description Style */
+  .description {
+    color: #fff;
+    margin-top: 10px;
+  }
+
+  .lo{
+    max-width: 30px; 
+    border-radius: 4px;
+  }
+
+  .pro{
+    align-content: center;
+  }
